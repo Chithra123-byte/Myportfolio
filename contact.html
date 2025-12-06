@@ -6,27 +6,32 @@
 <script src="script.js"></script>
 </head>
 <body>
+
 <header><h1>Contact Me</h1></header>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="resume.html">Resume</a>
   <a href="biodata.html">Bio-data</a>
-  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="active">Contact</a>
 </nav>
 
 <div class="container">
-<form onsubmit="return validateForm()">
-<label>Name:</label><br>
-<input type="text" id="name"><br><br>
+<form id="contactForm" onsubmit="return validateForm()">
+    
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
 
-<label>Email:</label><br>
-<input type="email" id="email"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email ID" required><br><br>
 
-<label>Message:</label><br>
-<textarea id="msg"></textarea><br><br>
+    <label for="msg">Message:</label><br>
+    <textarea id="msg" name="msg" placeholder="Write your message here" required></textarea><br><br>
 
-<button type="submit">Send</button>
+    <button type="submit">Send</button>
+
 </form>
 </div>
+
 </body>
 </html>
