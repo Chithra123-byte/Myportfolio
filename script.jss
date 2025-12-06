@@ -5,15 +5,16 @@ $(document).ready(function(){
     });
 
     // Contact form validation
-    function validate(){
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
+    function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let msg = document.getElementById("msg").value.trim();
 
-        if(name == "" || email == ""){
-            alert("All fields are required!");
-            return false;
-        }
-        alert("Message Sent!");
+    if (name === "" || email === "" || msg === "") {
+        alert("All fields are required!");
+        return false;
     }
-    window.validateForm = validate;
-});
+    alert("Message sent successfully!");
+    return true;
+}
+
